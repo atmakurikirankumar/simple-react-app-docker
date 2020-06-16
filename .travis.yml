@@ -7,7 +7,7 @@ before_install:
   - docker build -t atmakurikirankumar/simple-react-app -f Dockerfile .
 
 script:
-  - docker run -e CI=true atmakurikirankumar/simple-react-app npm run test
+  - docker run -e CI=true atmakurikirankumar/simple-react-app
 
 deploy:
   provider: elasticbeanstalk
