@@ -1,0 +1,10 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t atmakurikirankumar/simple-react-app -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true atmakurikirankumar/simple-react-app npm run test
